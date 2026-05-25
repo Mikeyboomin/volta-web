@@ -124,8 +124,8 @@ export default function Home() {
           </p>
 
           {/* Countdown */}
-          <div className="animate-fade-up delay-300 mb-6">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: 'var(--text-muted)' }}>
+          <div className="countdown-mobile-block animate-fade-up delay-300 mb-6">
+            <p className="countdown-label text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: 'var(--text-muted)' }}>
               MVP Launch Countdown
             </p>
             <div className="countdown-mobile-safe">
