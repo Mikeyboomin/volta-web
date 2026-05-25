@@ -128,7 +128,9 @@ export default function Home() {
             <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: 'var(--text-muted)' }}>
               MVP Launch Countdown
             </p>
-            <Countdown />
+            <div className="countdown-mobile-safe">
+              <Countdown />
+            </div>
           </div>
 
         </div>
