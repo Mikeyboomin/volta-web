@@ -58,12 +58,24 @@ export async function POST(request: NextRequest) {
             <div style="max-width: 560px; margin: 0 auto; padding: 48px 24px;">
               
               <div style="margin-bottom: 32px;">
-                <div style="display: inline-flex; align-items: center; gap: 10px;">
-                  <div style="width: 32px; height: 32px; background: #5534FC; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
-                    <span style="color: white; font-weight: 900; font-size: 18px;">V</span>
-                  </div>
-                  <span style="color: #F0F0FA; font-weight: 700; font-size: 18px;">Volta Finance</span>
-                </div>
+                <table role="presentation" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="vertical-align: middle; padding-right: 10px;">
+                      <img
+                        src="https://www.voltafinance.tech/logo.png"
+                        alt="Volta Finance"
+                        width="32"
+                        height="32"
+                        style="display: block; width: 32px; height: 32px; border-radius: 8px;"
+                      />
+                    </td>
+                    <td style="vertical-align: middle;">
+                      <span style="color: #F0F0FA; font-weight: 700; font-size: 18px;">
+                        Volta Finance
+                      </span>
+                    </td>
+                  </tr>
+                </table>
               </div>
 
               <h1 style="color: #F0F0FA; font-size: 28px; font-weight: 900; margin: 0 0 16px 0; line-height: 1.2;">
