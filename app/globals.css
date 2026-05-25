@@ -141,13 +141,202 @@ body::before {
   inset: 0;
   overflow: hidden;
   pointer-events: none;
+  z-index: 0;
 }
 
 .mesh-orb {
   position: absolute;
+  z-index: 1;
   border-radius: 50%;
   filter: blur(80px);
   animation: pulse-glow 6s ease-in-out infinite;
+}
+
+/* Hero-only dot grid */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-dot-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: radial-gradient(
+    circle,
+    rgba(85, 52, 252, 0.42) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
+  opacity: 0.55;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 12%,
+    black 80%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 12%,
+    black 80%,
+    transparent 100%
+  );
+}
+
+.hero-dot-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image: radial-gradient(
+    circle,
+    rgba(150, 130, 255, 0.92) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
+  opacity: 0;
+  filter: drop-shadow(0 0 6px rgba(85, 52, 252, 0.75));
+  animation: dotZoneRipple 11.2s linear infinite;
+  clip-path: circle(0% at var(--glow-x) var(--glow-y));
+}
+
+.glow-zone-1 {
+  --glow-x: 22%;
+  --glow-y: 22%;
+  animation-delay: 0s;
+}
+
+.glow-zone-2 {
+  --glow-x: 72%;
+  --glow-y: 18%;
+  animation-delay: 1.6s;
+}
+
+.glow-zone-3 {
+  --glow-x: 42%;
+  --glow-y: 36%;
+  animation-delay: 3.2s;
+}
+
+.glow-zone-4 {
+  --glow-x: 83%;
+  --glow-y: 45%;
+  animation-delay: 4.8s;
+}
+
+.glow-zone-5 {
+  --glow-x: 17%;
+  --glow-y: 57%;
+  animation-delay: 6.4s;
+}
+
+.glow-zone-6 {
+  --glow-x: 58%;
+  --glow-y: 66%;
+  animation-delay: 8s;
+}
+
+.glow-zone-7 {
+  --glow-x: 34%;
+  --glow-y: 78%;
+  animation-delay: 9.6s;
+}
+
+@keyframes dotZoneRipple {
+  0% {
+    opacity: 0;
+    clip-path: circle(0% at var(--glow-x) var(--glow-y));
+  }
+
+  1.5% {
+    opacity: 0.08;
+    clip-path: circle(1% at var(--glow-x) var(--glow-y));
+  }
+
+  3% {
+    opacity: 0.18;
+    clip-path: circle(2% at var(--glow-x) var(--glow-y));
+  }
+
+  4.5% {
+    opacity: 0.32;
+    clip-path: circle(3% at var(--glow-x) var(--glow-y));
+  }
+
+  6% {
+    opacity: 0.48;
+    clip-path: circle(4% at var(--glow-x) var(--glow-y));
+  }
+
+  7.5% {
+    opacity: 0.62;
+    clip-path: circle(5% at var(--glow-x) var(--glow-y));
+  }
+
+  9% {
+    opacity: 0.78;
+    clip-path: circle(6.25% at var(--glow-x) var(--glow-y));
+  }
+
+  10.5% {
+    opacity: 0.9;
+    clip-path: circle(7.5% at var(--glow-x) var(--glow-y));
+  }
+
+  12% {
+    opacity: 0.95;
+    clip-path: circle(8.5% at var(--glow-x) var(--glow-y));
+  }
+
+  13.5% {
+    opacity: 0.82;
+    clip-path: circle(9.4% at var(--glow-x) var(--glow-y));
+  }
+
+  15% {
+    opacity: 0.66;
+    clip-path: circle(10.2% at var(--glow-x) var(--glow-y));
+  }
+
+  16.5% {
+    opacity: 0.48;
+    clip-path: circle(10.9% at var(--glow-x) var(--glow-y));
+  }
+
+  18% {
+    opacity: 0.32;
+    clip-path: circle(11.5% at var(--glow-x) var(--glow-y));
+  }
+
+  19.5% {
+    opacity: 0.18;
+    clip-path: circle(12% at var(--glow-x) var(--glow-y));
+  }
+
+  21% {
+    opacity: 0.08;
+    clip-path: circle(12.5% at var(--glow-x) var(--glow-y));
+  }
+
+  22.5% {
+    opacity: 0;
+    clip-path: circle(13% at var(--glow-x) var(--glow-y));
+  }
+
+  100% {
+    opacity: 0;
+    clip-path: circle(13% at var(--glow-x) var(--glow-y));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-dot-glow {
+    animation: none;
+    opacity: 0;
+  }
 }
 
 .mesh-orb-1 {

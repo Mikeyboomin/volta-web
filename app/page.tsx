@@ -53,13 +53,6 @@ export default function Home() {
   return (
     <div className="relative min-h-screen" style={{ position: 'relative', zIndex: 1 }}>
 
-      {/* Mesh background */}
-<div className="mesh-bg">
-  <div className="mesh-orb mesh-orb-1" />
-  <div className="mesh-orb mesh-orb-2" />
-  <div className="mesh-orb mesh-orb-3" />
-</div>
-
       {/* Nav */}
       <nav
         className="relative z-10 flex items-center justify-between px-6 sm:px-10 py-5"
@@ -91,6 +84,22 @@ export default function Home() {
 
       {/* Hero */}
       <section className="hero-section relative z-10 pt-20 pb-16">
+        <div className="hero-dot-grid" />
+        <div className="hero-dot-glow glow-zone-1" />
+        <div className="hero-dot-glow glow-zone-2" />
+        <div className="hero-dot-glow glow-zone-3" />
+        <div className="hero-dot-glow glow-zone-4" />
+        <div className="hero-dot-glow glow-zone-5" />
+        <div className="hero-dot-glow glow-zone-6" />
+        <div className="hero-dot-glow glow-zone-7" />
+
+        {/* Mesh background */}
+        <div className="mesh-bg">
+          <div className="mesh-orb mesh-orb-1" />
+          <div className="mesh-orb mesh-orb-2" />
+          <div className="mesh-orb mesh-orb-3" />
+        </div>
+
         <div className="hero-glow" />
         <div className="relative z-10 px-6 sm:px-10 max-w-5xl mx-auto">
 
